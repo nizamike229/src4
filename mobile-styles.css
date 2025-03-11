@@ -1,0 +1,337 @@
+/* Мобильные стили для сайта */
+
+/* Базовые настройки для мобильных устройств */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html, body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Принудительное отключение масштабирования на iOS */
+body {
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Основные стили для мобильных устройств */
+@media screen and (max-width: 768px) {
+  /* Общие стили */
+  body {
+    font-size: 1em;
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+    zoom: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  
+  /* Контейнеры */
+  .container, 
+  .wrapper1,
+  .wrapper2 {
+    width: 100% !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    box-sizing: border-box !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Специальный контейнер для заголовка */
+  h2.font-header {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: calc(100% - 10px) !important;
+    max-width: none !important;
+  }
+
+  /* Контент */
+  .textable,
+  .node,
+  [class*="node"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Текст */
+  .textable {
+    font-size: 1em !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+
+  .textable p,
+  .textable span {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  h1, h2, h3, .font-header {
+    font-size: 1.375em !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    margin: 15px 0 !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Изображения */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Кнопки */
+  .button-container .btn,
+  [id^="uid"] {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 10px auto !important;
+    padding: 12px 20px !important;
+    font-size: 1em !important;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 44px !important;
+  }
+
+  /* Сетка */
+  .grid {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .grid .col {
+    width: 100% !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 15px !important;
+    float: none !important;
+  }
+
+  /* Отступы */
+  .padding {
+    height: 20px !important;
+    clear: both !important;
+  }
+
+  /* Навигация */
+  #node21_meta .navM {
+    width: 80% !important;
+    left: -80% !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Слайдер */
+  #node60_meta .slider8-page {
+    width: 40px !important;
+    height: 40px !important;
+    margin-right: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Исправление отступов для вложенных элементов */
+  [class*="node"] [class*="wrapper"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Фиксы для inline стилей */
+  [style*="font-size"] {
+    font-size: 1em !important;
+  }
+
+  [style*="margin"],
+  [style*="padding"] {
+    margin: 5px 0 !important;
+    padding: 5px 0 !important;
+  }
+
+  /* Фикс для переполнения текста */
+  .xs-force-center {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .xs-scale-60,
+  .xs-scale-80 {
+    transform: none !important;
+    width: 100% !important;
+  }
+
+  /* Навигация */
+  #node21_meta [id='nav-toggle']:checked ~ .navM {
+    left: 0 !important;
+  }
+
+  /* Табы */
+  #node75_meta .tabs1-page {
+    padding: 10px 15px !important;
+    font-size: 0.875em !important;
+    margin: 2px !important;
+  }
+
+  /* Спойлеры */
+  [id$="_meta"] .spoiler43-link {
+    font-size: 0.875em !important;
+    padding: 8px 0 !important;
+  }
+
+  /* Карточки */
+  [class*="node"] > .wrapper1 {
+    margin-bottom: 15px !important;
+  }
+
+  /* Отзывы */
+  #node89_meta .slider2-previous,
+  #node89_meta .slider2-next {
+    display: none !important;
+  }
+
+  #node89_meta .slider2-pagination {
+    margin: 0 !important;
+  }
+
+  /* Формы */
+  input, 
+  textarea,
+  select {
+    font-size: 1em !important;
+    padding: 10px !important;
+  }
+
+  /* Увеличение размера текста для ссылки с номером телефона и именем Тони Старк */
+  .button-wrapper a.btn-legacy span.text {
+    font-size: 1.3em !important;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.875em;
+  }
+
+  h1, h2, h3, .font-header {
+    font-size: 1.25em !important;
+  }
+
+  .button-container .btn,
+  [id^="uid"] {
+    font-size: 0.875em !important;
+    padding: 10px 15px !important;
+  }
+
+  #node21_meta .navM {
+    width: 100% !important;
+    left: -100% !important;
+  }
+
+  /* Увеличение размера текста для ссылки с номером телефона и именем Тони Старк */
+  .button-wrapper a.btn-legacy span.text {
+    font-size: 1.2em !important;
+  }
+}
+
+/* Улучшения для планшетов */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 95% !important;
+  }
+
+  .grid .col {
+    width: 48% !important;
+    margin: 1% !important;
+  }
+}
+
+/* Фиксы для высоких DPI экранов */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Анимации для мобильных устройств */
+@media (prefers-reduced-motion: no-preference) {
+  .button-container .btn:active,
+  [id^="uid"]:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Стили для сверхмалых экранов */
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 0.75em;
+    min-width: 240px;
+  }
+
+  h1, h2, h3, .font-header {
+    font-size: 1.1em !important;
+    line-height: 1.2 !important;
+    margin: 10px 0 !important;
+  }
+
+  .container, 
+  .wrapper1,
+  .wrapper2 {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+
+  .button-container .btn,
+  [id^="uid"] {
+    max-width: 240px !important;
+    padding: 8px 12px !important;
+    font-size: 0.8em !important;
+    min-height: 36px !important;
+  }
+
+  .textable {
+    font-size: 0.9em !important;
+    line-height: 1.3 !important;
+  }
+
+  .padding {
+    height: 15px !important;
+  }
+
+  .grid .col {
+    margin: 0 0 15px 0 !important;
+    padding: 0 10px !important;
+  }
+
+  /* Уменьшаем размер текста для кнопок и телефона */
+  .button-wrapper a.btn-legacy span.text {
+    font-size: 1em !important;
+  }
+
+  input, 
+  textarea,
+  select {
+    font-size: 0.9em !important;
+    padding: 8px !important;
+  }
+} 
